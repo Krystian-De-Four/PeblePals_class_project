@@ -96,6 +96,12 @@
     border:2px solid var(--text-black);
     border-radius: 8px;
     padding: 16px;
+    display:flex;
+    flex-direction:column;
+    >h2{
+        text-decoration: underline;
+        font-weight:bold;
+    }
 }
 .benefit-grid{
     grid-template-columns: 1fr 1fr;
@@ -106,4 +112,20 @@
 }
 .benefit-box.wide{
     grid-column: span 2;
+}
+.bullet{
+    display:flex;
+    border: 2px solid var(--text-black);
+    border-radius: 8px;
+    padding: 4px;
+    
+}
+.bullet-nr{
+    border-right: 2px solid var(--text-black);
+    justify-content: center;
+    width:20px;
+    padding: 4px;
+}
+.bullet-text{
+    padding: 4px
 }
