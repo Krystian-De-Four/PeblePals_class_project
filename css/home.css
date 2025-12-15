@@ -112,6 +112,15 @@
 }
 .benefit-box.wide{
     grid-column: span 2;
+    border: 2px solid var(--text-black);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction:column;
+    >h2{
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
 .bullet{
     display:flex;
@@ -128,4 +137,22 @@
 }
 .bullet-text{
     padding: 4px
+}
+.benefit-box{
+    border:2px solid var(--text-black);
+    border-radius: 8px;
+    padding: 16px;
+    display:flex;
+    flex-direction: column;
+    >h2{
+        text-decoration: underline;
+        font-weight:bold;
+    }
+}
+.home-section{
+    display:flex;
+    >h2{
+        text-decoration: underline;
+        font-weight: bold;
+    }
 }
