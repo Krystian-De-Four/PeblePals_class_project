@@ -85,6 +85,27 @@
         text-decoration: underline;
     }
 }
+.home-sec-img1{
+    background-color:#e7e7dd;
+    border: 2px solid var(#e7e7dd);
+    border-radius: 38px;
+}
+.home-sec-chin{
+    height: 60px;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    display:flex;
+    background-color: #000;
+
+    border-radius: 0 0 40px 40px;
+    >p{
+        color:white;
+        
+        font-size: 28px;
+
+    }
+}
 .yellow{
     background-color: var(--yellow);
     border-radius: 0px 0px 128px 128px;
@@ -106,6 +127,13 @@
         text-decoration: underline;
         font-weight:bold;
     }
+}
+.home-section-blue-imgs{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:16px;
+    display:grid;
+    width:90%;
+    max-width:600px;
 }
 .benefit-grid{
     grid-template-columns: 1fr 1fr;
