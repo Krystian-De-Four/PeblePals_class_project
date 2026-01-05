@@ -1,7 +1,9 @@
 .hero-banner{
-    background-image: url(/assets/Banner_image.png);
+    background-image: url(../assets/Banner_image.png);
     height: 484px;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
 
     display:flex;
     flex-direction:column;
@@ -9,6 +11,7 @@
     justify-content:center;
     padding: 64px;
 }
+
 .hero-content{
     display:flex;
     flex-direction:column;
@@ -175,4 +178,9 @@
         width: 100%;
     }
 }
-.home-section-
+
+.footer-text{
+    font-weight: 100;
+    align-items: centre;
+    display: flex;
+}
