@@ -39,10 +39,7 @@
     box-shadow: var(--card-blue-shadow);
     flex-direction:column;
 }
-.stars-row{
-    border-bottom: 1px solid var(--text-black);
 
-}
 .t-form-input{
     background:none;
     border: 1px solid var(--text-black);
@@ -57,4 +54,26 @@
     > label{
         text-wrap: nowrap;
     }
+}
+.stars-row{
+    border-bottom: 1px solid var(--text-black);
+    align-items: center;
+    display: flex;
+    gap:8px;
+}
+
+.star{
+    height: 16px;
+    width:16px;
+    cursor:pointer;
+
+    background-image: url(/assets/star_yellow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    > input{
+        display:none;
+    }
+}
+.star:has(input:checked) ~.star{
+    background-image: url(/assets/star_black.svg)
 }
