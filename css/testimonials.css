@@ -77,3 +77,4 @@
 .star:has(input:checked) ~.star{
     background-image: url(/assets/star_black.svg)
 }
+
