@@ -1,5 +1,5 @@
-// FOR LATER, IGNORE FOR NOW
-const testimonialList = [
+// If we dont have local testimonials, these will be loaded by default
+let testimonialList = [
     {
         "rating": 4,
         "name": "Bobbi",
@@ -31,10 +31,26 @@ const testimonialList = [
         "review": "Walking my pet rock every day has been a great way to get some exercise!"
     }
 ]
+// The function will load testimonials, if nothing is saved, we use the default
+function loadTestimonials(){
+    let loaded = JSON.parse(localStorage.getItem("Testimonials"))
 
+    if (loaded){
+        return loaded
+    } else {
+        return testimonialList
+    }
+
+}
+
+function saveTestimonials(){
+    localStorage.setItem("Testimonials", JSON.stringify(testimonialList))
+}
+
+testimonialList = loadTestimonials();
 
 let testimonialsBox = document.getElementById("testimonials-box");
-
+// Draw the loaded testimonial to the screen
 for (let review of testimonialList){
 
     drawNewTestimonial(review.name, review.review, review.rating);
@@ -51,11 +67,18 @@ function addTestimonial(event){
     let rating = document.querySelector("input[name = rating]:checked").value;
 
     drawNewTestimonial(name, message, rating);
+// Adds a formatted testimonial to our lists, then saves the list to local storage
+    testimonialList.push({
+        "rating":rating,
+        "name":name,
+        "review":message,
+    })
+    saveTestimonials();
 
 }
 tForm.addEventListener("submit", addTestimonial);
 
-
+//Display testimoonial on the screen based on the values provided 
 function drawNewTestimonial(name, message, rating){
     
     let stars="";
